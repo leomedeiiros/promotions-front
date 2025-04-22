@@ -142,7 +142,7 @@ const MessagePreview = ({
     message += `\n🛒 ${productUrl}\n\n☑️ Link do grupo: https://linktr.ee/gdfit`;
     
     return message;
-    }, [productData, couponCode, storeType, vendorName, discountPercentage]);
+  }, [productData, couponCode, storeType, vendorName, discountPercentage, calculateDiscountedPrice, getStoreTypeText]);
   
 // Gerar a mensagem sempre que os dados mudarem
 useEffect(() => {
