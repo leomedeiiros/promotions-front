@@ -150,7 +150,7 @@ useEffect(() => {
     const message = generateMessage();
     setFinalMessage(message);
   }
-}, [productData, couponCode, discountPercentage, calculateDiscountedPrice, getStoreTypeText]);
+}, [productData, couponCode, discountPercentage, generateMessage, setFinalMessage]);
   
   return (
     <div className="message-preview">
