@@ -144,13 +144,13 @@ const MessagePreview = ({
     return message;
   };
   
-  // Gerar a mensagem sempre que os dados mudarem
-  useEffect(() => {
-    if (productData) {
-      const message = generateMessage();
-      setFinalMessage(message);
-    }
-  }, [productData, couponCode, storeType, vendorName, discountPercentage]);
+// Gerar a mensagem sempre que os dados mudarem
+useEffect(() => {
+  if (productData) {
+    const message = generateMessage();
+    setFinalMessage(message);
+  }
+}, [productData, couponCode, storeType, vendorName, discountPercentage, generateMessage, setFinalMessage]);
   
   return (
     <div className="message-preview">

@@ -22,9 +22,6 @@ function App() {
   const [storeSectionOpen, setStoreSectionOpen] = useState(false);
   const [imageSectionOpen, setImageSectionOpen] = useState(false);
   
-  // Referência para rolar a tela até a seção de configurações quando dados forem carregados
-  const configSectionRef = useRef(null);
-  
   const handleProductDataReceived = (data) => {
     setProductData(data);
     
