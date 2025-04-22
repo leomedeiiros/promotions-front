@@ -1,5 +1,5 @@
 // frontend/src/components/MessagePreview.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 const MessagePreview = ({ 
   productData, 
@@ -109,7 +109,7 @@ const MessagePreview = ({
   };
   
   // Função para gerar a mensagem final
-  const generateMessage = () => {
+  const generateMessage = useCallback(() => {
     const { name, currentPrice, originalPrice, productUrl } = productData;
     const storeTypeText = getStoreTypeText();
     
@@ -142,7 +142,7 @@ const MessagePreview = ({
     message += `\n🛒 ${productUrl}\n\n☑️ Link do grupo: https://linktr.ee/gdfit`;
     
     return message;
-  };
+    }, [productData, couponCode, storeType, vendorName, discountPercentage]);
   
 // Gerar a mensagem sempre que os dados mudarem
 useEffect(() => {

@@ -1,5 +1,5 @@
 // frontend/src/App.js
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import LinkForm from './components/LinkForm';
 import MessagePreview from './components/MessagePreview';
 import axios from 'axios';
